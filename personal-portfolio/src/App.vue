@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Download, Link, Message } from '@element-plus/icons-vue'
 import {
   ElCol,
   ElText,
@@ -30,7 +31,7 @@ const openEmail = (email: string) => {
       <ElRow justify="center" style="padding: 20px 0 60px 0">
         <ElCol :span="10">
           <ElSpace direction="vertical" style="align-items: flex-start">
-            <ElText style="font-size: 1rem;">Frontend Developer</ElText>
+            <ElText style="font-size: 1rem">Frontend Developer</ElText>
             <ElText style="font-weight: 700; font-size: 2.5rem">Joshua Visayan</ElText>
             <ElText type="info" style="max-width: 600px"
               >Building sleek, high-performance web experiences that turn complex ideas into
@@ -38,16 +39,36 @@ const openEmail = (email: string) => {
               architecture, I create frontend solutions that users love and teams trust.</ElText
             >
             <ElSpace wrap style="margin-top: 10px">
-              <ElButton class="hero-button" plain @click="openExternal('https://github.com/yourusername')">
+              <ElButton
+                class="hero-button"
+                :icon="Link"
+                plain
+                @click="openExternal('https://github.com/yourusername')"
+              >
                 GitHub
               </ElButton>
-              <ElButton class="hero-button" plain @click="openExternal('https://linkedin.com/in/yourusername')">
+              <ElButton
+                class="hero-button"
+                :icon="Link"
+                plain
+                @click="openExternal('https://linkedin.com/in/yourusername')"
+              >
                 LinkedIn
               </ElButton>
-              <ElButton class="hero-button" plain @click="openEmail('your.email@example.com')">
+              <ElButton
+                class="hero-button"
+                :icon="Message"
+                plain
+                @click="openEmail('your.email@example.com')"
+              >
                 Email
               </ElButton>
-              <ElButton class="hero-button" plain @click="openExternal('/path-to-resume.pdf')">
+              <ElButton
+                class="hero-button"
+                plain
+                :icon="Download"
+                @click="openExternal('/path-to-resume.pdf')"
+              >
                 Resume
               </ElButton>
             </ElSpace>
@@ -58,22 +79,16 @@ const openEmail = (email: string) => {
       <!-- What I Work With Section -->
       <ElRow justify="center" style="padding: 20px 0 60px 0">
         <ElCol :span="10">
-          <ElText
-            style="
-              display: block;
-              margin-bottom: 30px;
-              font-weight: 700;
-              font-size: 2rem;
-            "
+          <ElText style="display: block; margin-bottom: 30px; font-weight: 700; font-size: 2rem"
             >What I Work With</ElText
           >
           <ElSpace wrap>
-            <ElTag size="large">Vue</ElTag>
-            <ElTag size="large">Go</ElTag>
-            <ElTag size="large">TypeScript</ElTag>
-            <ElTag size="large">SQL</ElTag>
-            <ElTag size="large">Docker</ElTag>
-            <ElTag size="large">Flutter</ElTag>
+            <ElTag size="large" round type="info">Vue</ElTag>
+            <ElTag size="large" round type="info">Go</ElTag>
+            <ElTag size="large" round type="info">TypeScript</ElTag>
+            <ElTag size="large" round type="info">SQL</ElTag>
+            <ElTag size="large" round type="info">Docker</ElTag>
+            <ElTag size="large" round type="info">Flutter</ElTag>
           </ElSpace>
         </ElCol>
       </ElRow>
@@ -81,13 +96,7 @@ const openEmail = (email: string) => {
       <!-- Work Experience Section -->
       <ElRow justify="center" style="padding: 20px 0 60px 0">
         <ElCol :span="10">
-          <ElText
-            style="
-              display: block;
-              margin-bottom: 30px;
-              font-weight: 700;
-              font-size: 2rem;
-            "
+          <ElText style="display: block; margin-bottom: 30px; font-weight: 700; font-size: 2rem"
             >Work Experience</ElText
           >
           <ElTimeline>
@@ -95,14 +104,14 @@ const openEmail = (email: string) => {
               <ElCard>
                 <template #header>
                   <ElSpace>
-                    <ElText tag="b">Software Engineer</ElText>
+                    <ElText tag="b" size="large">Software Engineer</ElText>
                     <ElTag type="success">Current</ElTag>
                   </ElSpace>
                 </template>
-                <ElText tag="p" style="padding-bottom: 10px"
+                <ElText tag="p" size="default" style="padding-bottom: 15px"
                   >Mobile Internet Technology - Tokyo, Japan</ElText
                 >
-                <ElText tag="p" type="info"
+                <ElText tag="p" type="info" style="padding-bottom: 15px"
                   >Working across frontend and backend development to modernize enterprise systems.
                   Played a key role in rebuilding a legacy POS management system, improving
                   performance, maintainability, and overall user experience. Collaborated closely
@@ -122,12 +131,12 @@ const openEmail = (email: string) => {
             <ElTimelineItem timestamp="Jan 2023 - Jul 2023" placement="top">
               <ElCard>
                 <template #header>
-                  <ElText tag="b">Website Technician (WordPress)</ElText>
+                  <ElText tag="b" size="large">Website Technician (WordPress)</ElText>
                 </template>
-                <ElText tag="p" style="padding-bottom: 10px"
+                <ElText tag="p" style="padding-bottom: 15px"
                   >Sites at Scale - Dumaguete, Philippines</ElText
                 >
-                <ElText tag="p" type="info"
+                <ElText tag="p" type="info" style="padding-bottom: 15px"
                   >Focused on building and maintaining high-volume client websites. Delivered custom
                   pages, improved responsiveness, and handled troubleshooting across multiple
                   WordPress projects, including e-commerce and VIP client requests.</ElText
@@ -148,18 +157,10 @@ const openEmail = (email: string) => {
       <!-- Projects Section -->
       <ElRow justify="center" style="padding: 20px 0 60px 0">
         <ElCol :span="10">
-          <ElText
-            style="
-              display: block;
-              margin-bottom: 30px;
-              font-weight: 700;
-              font-size: 2rem;
-            "
+          <ElText style="display: block; margin-bottom: 30px; font-weight: 700; font-size: 2rem"
             >Projects</ElText
           >
-          <ElText>
-            Under construction... More projects coming soon!
-          </ElText>
+          <ElText> Under construction... More projects coming soon! </ElText>
         </ElCol>
       </ElRow>
     </ElMain>
@@ -167,7 +168,6 @@ const openEmail = (email: string) => {
 </template>
 
 <style scoped>
-
 .hero-button {
   font-family: 'Inter', sans-serif;
 }
