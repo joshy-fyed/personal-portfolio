@@ -98,11 +98,11 @@ const openEmail = (email: string) => {
                   with a small team to deliver production-ready solutions on a tight timeline.
                 </ElText>
                 <ElSpace wrap class="tech-tags">
-                  <ElTag size="large">Vue 3</ElTag>
-                  <ElTag size="large">Go Lang</ElTag>
-                  <ElTag size="large">TypeScript</ElTag>
-                  <ElTag size="large">Element Plus</ElTag>
-                  <ElTag size="large">Vite</ElTag>
+                  <ElTag size="large" type="info">Vue 3</ElTag>
+                  <ElTag size="large" type="info">Go Lang</ElTag>
+                  <ElTag size="large" type="info">TypeScript</ElTag>
+                  <ElTag size="large" type="info">Element Plus</ElTag>
+                  <ElTag size="large" type="info">Vite</ElTag>
                 </ElSpace>
               </ElSpace>
             </ElTimelineItem>
@@ -111,7 +111,7 @@ const openEmail = (email: string) => {
               <ElSpace direction="vertical" alignment="start" fill>
                 <div class="timeline-header">
                   <ElSpace class="timeline-title-wrapper" wrap>
-                    <ElText class="job-title">Website Technician (WordPress)</ElText>
+                    <ElText class="job-title">WordPress Website Technician</ElText>
                   </ElSpace>
                   <ElText type="info" class="job-date">Jan 2023 - Jul 2023</ElText>
                 </div>
@@ -122,11 +122,11 @@ const openEmail = (email: string) => {
                   WordPress projects, including e-commerce and VIP client requests.
                 </ElText>
                 <ElSpace wrap class="tech-tags">
-                  <ElTag size="large">WordPress</ElTag>
-                  <ElTag size="large">WPBakery</ElTag>
-                  <ElTag size="large">Elementor</ElTag>
-                  <ElTag size="large">WooCommerce</ElTag>
-                  <ElTag size="large">PHP</ElTag>
+                  <ElTag size="large" type="info">WordPress</ElTag>
+                  <ElTag size="large" type="info">WPBakery</ElTag>
+                  <ElTag size="large" type="info">Elementor</ElTag>
+                  <ElTag size="large" type="info">WooCommerce</ElTag>
+                  <ElTag size="large" type="info">PHP</ElTag>
                 </ElSpace>
               </ElSpace>
             </ElTimelineItem>
@@ -134,10 +134,10 @@ const openEmail = (email: string) => {
         </ElCol>
       </ElRow>
 
-      <!-- What I Work With Section -->
+      <!-- Skills Section -->
       <ElRow justify="center" class="section">
         <ElCol :xs="22" :sm="20" :md="18" :lg="14" :xl="10">
-          <ElText class="section-title">What I Work With</ElText>
+          <ElText class="section-title">Skills</ElText>
           <ElSpace wrap class="skills-container">
             <ElTag size="large" round type="info">Vue</ElTag>
             <ElTag size="large" round type="info">Go</ElTag>
@@ -168,6 +168,10 @@ const openEmail = (email: string) => {
   padding: 0;
 }
 
+.el-text:not(.el-text--info) {
+  color: white;
+}
+
 .section {
   padding: 1.25rem 0 2.5rem;
 }
@@ -191,7 +195,6 @@ const openEmail = (email: string) => {
 
 .hero-subtitle {
   font-size: clamp(1rem, 3vw, 1.2rem);
-  margin-top: 0.25rem;
 }
 
 .hero-description {
